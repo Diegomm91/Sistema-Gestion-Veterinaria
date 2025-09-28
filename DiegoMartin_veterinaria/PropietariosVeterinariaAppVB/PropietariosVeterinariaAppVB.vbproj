@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <RootNamespace>PropietariosVeterinariaAppVB</RootNamespace>
+    <StartupObject>Sub Main</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="PropietariosVeterinariaAppVB.DatabaseHelper" />
+    <Import Include="PropietariosVeterinariaAppVB.Propietario" />
+    <Import Include="PropietariosVeterinariaAppVB.PropietarioRepository" />
+    <Import Include="PropietariosVeterinariaAppVB.Mascota" />
+    <Import Include="PropietariosVeterinariaAppVB.MascotaRepository" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.119" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="FormPropietarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormPropietarios.Designer.vb">
+      <DependentUpon>FormPropietarios.vb</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="FormPropietarios.resx">
+      <DependentUpon>FormPropietarios.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="FormMascotas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMascotas.Designer.vb">
+      <DependentUpon>FormMascotas.vb</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="FormMascotas.resx">
+      <DependentUpon>FormMascotas.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
