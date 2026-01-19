@@ -1,0 +1,26 @@
+## Visual Studio / .NET Core / .NET Framework
+# Carpetas de salida (Binarios)
+[Bb]in/
+[Ob]j/
+
+# Archivos de usuario y temporales de Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos de base de datos local
+*.mdf
+*.ldf
+*.sdf
+
+# Logs
+*.log
+
+# Archivos de configuración con datos sensibles (si existen)
+appsettings.json
+*.env
+
+# Carpetas de paquetes externos
+packages/
+node_modules/
